@@ -2,9 +2,12 @@
 const Navigation = () => {
   return (
     <nav>
-        <h3>About Us</h3>
-        <h3>Home</h3>
-        <h3>Login/Signup</h3>
+        <ul className='flex-row'>
+            <li className=''> <a href=''>about us</a> </li>
+            <li className=''> <a href=''>home</a> </li>
+            <li className=''> <a href=''>login / sign up</a> </li>
+        </ul>
+        
     </nav>
   )
 }

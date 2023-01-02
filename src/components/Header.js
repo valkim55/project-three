@@ -1,12 +1,16 @@
 import Navigation from './Navigation'
 
-const Header = () => {
+const Header = ({title}) => {
   return (
-    <header className='header'>
-        our app name
+    <header className='flex-row'>
+        {title}
         <Navigation />
     </header>
   )
+}
+
+Header.defaultProps = {
+    title: 'something_skincare'
 }
 
 export default Header
