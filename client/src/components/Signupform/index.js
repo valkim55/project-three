@@ -3,8 +3,11 @@ import Form from "react-bootstrap/Form";
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 
+import {useMutation} from '@apollo/client';
+import {ADD_USER} from '../../utils/mutations';
+import Auth from '../../utils/auth';
 
-const Signinform = () => {
+const Signupform = () => {
   const [userFormData, setUserFormData] = useState({
     username: "",
     email: "",
@@ -14,14 +17,15 @@ const Signinform = () => {
   const [validated] = useState(false);
 
   const [showAlert, setShowAlert] = useState(false);
+  const [addUser, {error}] = useMutation(ADD_USER);
 
-//   useEffect(() => {
-//     if (error) {
-//       setShowAlert(true);
-//     } else {
-//       setShowAlert(false);
-//     }
-//   });
+  useEffect(() => {
+    if (error) {
+      setShowAlert(true);
+    } else {
+      setShowAlert(false);
+    }
+  }, [error]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -29,10 +33,38 @@ const Signinform = () => {
     setUserFormData({ ...userFormData, [name]: value });
   };
 
+   const handleFormSubmit = async (event) => {
+     event.preventDefault();
+
+     // check if form has everything (as per react-bootstrap docs)
+     const form = event.currentTarget;
+     if (form.checkValidity() === false) {
+       event.preventDefault();
+       event.stopPropagation();
+     }
+
+     try {
+       console.log(userFormData);
+       const { data } = await addUser({ variables: { ...userFormData } });
+
+
+       console.log(data);
+       Auth.login(data.addUser.token);
+     } catch (err) {
+       console.error(err);
+     }
+
+     setUserFormData({
+       username: "",
+       email: "",
+       password: "",
+     });
+   };
+
   return (
     <>
       {/* This is needed for the validation functionality above */}
-      <Form noValidate validated={validated}>
+      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert
           dismissible
@@ -105,4 +137,4 @@ const Signinform = () => {
   );
 }
 
-export default Signinform;
+export default Signupform;

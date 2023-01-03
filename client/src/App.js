@@ -2,15 +2,33 @@ import React from "react";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Signinform from "./components/Signinform";
+import Signupform from "./components/Signupform";
+
+import {
+  ApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
+
+const httpLink = createHttpLink({
+  uri: "http://localhost:3001/graphql",
+});
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <div className="">
-      <Header />
-      <Signinform />
-      <Footer />
-    </div>
+    <ApolloProvider client={client}>
+      <div className="">
+        <Header />
+        <Signupform />
+        <Footer />
+      </div>
+    </ApolloProvider>
   );
 }
 
