@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Signinform from "./components/Signinform";
 
 function App() {
   return (
     <div className="">
-        <Header />
-        welcome!
-        <Footer />
+      <Header />
+      <Signinform />
+      <Footer />
     </div>
   );
 }
