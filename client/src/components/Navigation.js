@@ -20,15 +20,25 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="navbar" />
           <Navbar.Collapse id="navbar">
             <Nav className="ml-auto">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/searchProduct">
                 Search For Products
               </Nav.Link>
+
+
+              <Nav.Link as={Link} to="/myFaves">
+                My Faves
+            </Nav.Link>
+
+            <Nav.Link as={Link} to="/about">
+                About Us
+            </Nav.Link>
+
               {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to="/saved">
-                    See Your Fave Products
-                  </Nav.Link>
+                  {/* <Nav.Link as={Link} to="/myFaves">
+                    My Faves
+                  </Nav.Link> */}
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
               ) : (

@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model, Types } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 
@@ -19,6 +19,11 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    favoriteProducts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Product'}
+    ]
   },
   // set this to use virtual below
   {

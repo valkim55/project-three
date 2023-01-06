@@ -1,7 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navigation from "./components/Navigation";
+import MyFaves from './components/MyFaves';
+import SearchProduct from "./components/SearchProduct";
+import About from './components/About'
 
 import {
   ApolloProvider,
@@ -34,7 +37,20 @@ function App() {
       <Router>
         <>
         <Navigation/>
-        <Routes></Routes>
+
+        <Routes>
+            <Route path='/myfaves' element={<MyFaves />}>
+
+            </Route>
+
+            <Route path='/searchProduct' element={<SearchProduct />}>
+
+            </Route>
+
+            <Route path='/about' element={<About />}>
+
+            </Route>
+        </Routes>
         </>
       </Router>
     </ApolloProvider>
