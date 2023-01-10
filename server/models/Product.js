@@ -1,11 +1,8 @@
-const {Schema, model, Types} = require('mongoose');
+const {Schema, model} = require('mongoose');
 
 const ProductSchema = new Schema(
     {
-        productId: {
-            type: Schema.Types.ObjectId
-        },
-
+        
         title: {
             type: String, 
             required: true, 
@@ -47,6 +44,10 @@ const ProductSchema = new Schema(
 
         productLink: {
             type: String
+        },
+        username: {
+            type: String,
+            required: true
         }
 
 
@@ -55,4 +56,4 @@ const ProductSchema = new Schema(
 );
 
 const Product = model('Product', ProductSchema);
-module.exports = Product;
+module.exports = {Product};
