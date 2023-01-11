@@ -13,17 +13,15 @@ const typeDefs = gql`
     productId: ID!
     title: String
     description: String
-    image: String
+    main_image: String
     price: String
     rating: Int
-    reviews: Int
+    ratings_total: Int
     brand: String
-    productLink: String
+    link: String
   }
 
-  input ProductInput {
-    
-  }
+ 
 
   type Auth {
     token: ID!

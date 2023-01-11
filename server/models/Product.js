@@ -19,24 +19,24 @@ const ProductSchema = new Schema(
 
         description: {
             type: String, 
-            required: true
+            
         },
 
         price: {
             type: String,
-            required: true
+            
         },
 
-        image: {
+        main_image: {
             type: String,
-            required: true 
+        
         },
 
         rating: {
             type: Number
         },
 
-        reviews: {
+        ratings_total: {
             type: Number 
 
         },
@@ -45,7 +45,7 @@ const ProductSchema = new Schema(
             type: String 
         },
 
-        productLink: {
+        link: {
             type: String
         }
 
