@@ -2,9 +2,9 @@ const {Schema, model, Types} = require('mongoose');
 
 const ProductSchema = new Schema(
     {
-        productId: {
+       _id: {
             type: Schema.Types.ObjectId
-        },
+       },
 
         title: {
             type: String, 
