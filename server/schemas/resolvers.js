@@ -58,6 +58,27 @@ const resolvers = {
             }
             const token = signToken(user);
             return { token, user };
+        },
+
+        addProduct: async (parent, args, context) => {
+
+            // check if the user is authenticated to be allowed to save products
+            if(context.user) {
+
+                // find product by its title
+                const product = await Product.findOne(args.title)
+
+                // update User by adding selected product to user's products array
+                await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $push: {favProducts: product._id} },
+                    { new: true }
+                );
+
+                return product;
+            }
+
+            throw new AuthenticationError('You need to be logged in to save products!')
         }
     }
 };
