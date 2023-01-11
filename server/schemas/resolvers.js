@@ -21,7 +21,7 @@ const resolvers = {
         return Product.find().sort();
     }, 
 
-    product: async (parent, { category }) => {
+    productByCategory: async (parent, { category }) => {
         return Product.find({category});
     },
 
