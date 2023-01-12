@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import MyFaves from './components/MyFaves';
 import SearchProduct from "./components/SearchProduct";
 import About from './components/About'

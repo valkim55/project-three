@@ -1,47 +1,87 @@
-import {Card} from 'react-bootstrap';
+
+import { Card } from 'react-bootstrap';
+import caitlinProf from '../images/caitlin-prof.jpg';
+import arielProf from '../images/ariel1.jpg';
+import valProf from '../images/val-prof.jpg';
+
+
 
 const About = () => {
 
     const creators = [
         {
             name: "Caitlin O'Reilly",
-            avatar: '',
-            bio: 'lalala Caitlin loves frontend',
-            facts: 'has 3 cats',
+            firstName: "Caitlin",
+            title: 'Web Developer',
+            avatar:  caitlinProf ,
+            bio: 'Caitlin is a third grade teacher and a full stack developer with a passion for creating educational technology resources for her students and other children. She loves traveling, watercolor painting, and trying new craft breweries. ',
+            facts: ' has 3 cats',
             favProduct: '',
-            portfolioLink: '',
-            gitHub: '',
-            linkedIn: ''
+            portfolioLink: 'https://caitoreilly.github.io/react-portfolio/',
+            gitHub: 'https://github.com/caitoreilly',
+
         },
         {
             name: "Ariel Miller",
-            avatar: '',
-            bio: 'lalala Ariel loves backend',
-            facts: 'has 2 dogs',
-            portfolioLink: '',
-            gitHub: '',
-            linkedIn: ''
+            firstName: "Ariel",
+            title: 'Web Developer',
+            avatar: arielProf,
+            bio: 'A full stack web developer with a strong proficiency in HTML, CSS, JS, MERN stack, Sequelize, MySQL, NoSQL, Mongoose, Bootstrap, and MaterializeCSS.',
+
+            facts: ' has 2 dogs',
+            favProduct: 'Phloretin CF with Ferulic acid ',
+            portfolioLink: 'https://amiller0806.github.io/HTML-Advanced-CSS-Portfolio/',
+            gitHub: 'https://github.com/amiller0806',
+
         },
         {
             name: "Valeriya Kim",
-            avatar: '',
-            bio: 'lalala Val loves food',
-            facts: 'doesnt have pets',
-            portfolioLink: '',
-            gitHub: '',
-            linkedIn: ''
+            firstName: "Valeriya",
+            title: 'Web Developer',
+            avatar: valProf,
+            bio: 'Val loves food',
+            facts: "Val loves videogames, collects mechanical keyboards and dreams to move to Orlando Harry Potter World. Full Stack MERN & Java geek with a passion for server-side/back-end web development.",
+            favProduct: "BOBBI BROWN - Vitamin Enriched Face Base",
+            portfolioLink: 'https://www.linkedin.com/in/valeriya-kim/',
+            gitHub: 'https://github.com/valkim55',
+
         },
     ]
 
 
 
-  return (
-    <div>
-        {creators.map(( {name, avatar} ) => (
-            <Card></Card>
-        ))}
-    </div>
-  )
+    return (
+
+        <div>
+            <h1 class="about-us">About Us</h1>
+            {creators.map((creators) => (
+                <Card>
+                    <Card.Body>
+                        <Card.Title className="name-creator">{creators.name}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{creators.title}</Card.Subtitle>
+                        <Card.Text>
+                            <img class="prof-img" src={creators.avatar} alt= "profile pic" />
+
+                            <p class="about-creator">About {creators.firstName}:</p>
+                            <p>  {
+                                creators.bio
+                            } </p>
+                            <p class="fun-fact">Fun Fact: &nbsp; </p>
+                            <p class="creator-fact"> {creators.facts} </p>
+                            <p class="faveProduct">Favorite Product: &nbsp; </p>
+                            <p class="product-fave"> {
+                                creators.favProduct
+                            } </p>
+
+                        </Card.Text>
+                        <Card.Link href={creators.portfolioLink}>Portfolio Link</Card.Link>
+                        <Card.Link href={creators.gitHub}>Github</Card.Link>
+
+                    </Card.Body>
+                </Card>
+            ))}
+        </div>
+    )
 }
 
 export default About
