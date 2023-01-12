@@ -14,10 +14,10 @@ const About = () => {
             firstName: "Caitlin",
             title: 'Web Developer',
             avatar:  caitlinProf ,
-            bio: 'Caitlin loves frontend',
+            bio: 'Caitlin is a third grade teacher and a full stack developer with a passion for creating educational technology resources for her students and other children. She loves traveling, watercolor painting, and trying new craft breweries. ',
             facts: ' has 3 cats',
             favProduct: '',
-            portfolioLink: '',
+            portfolioLink: 'https://caitoreilly.github.io/react-portfolio/',
             gitHub: 'https://github.com/caitoreilly',
 
         },
@@ -29,7 +29,7 @@ const About = () => {
             bio: 'A full stack web developer with a strong proficiency in HTML, CSS, JS, MERN stack, Sequelize, MySQL, NoSQL, Mongoose, Bootstrap, and MaterializeCSS.',
 
             facts: ' has 2 dogs',
-            favProduct: 'CeraVe Salicylic Acid Acne Treatment Control Gel',
+            favProduct: 'Phloretin CF with Ferulic acid ',
             portfolioLink: 'https://amiller0806.github.io/HTML-Advanced-CSS-Portfolio/',
             gitHub: 'https://github.com/amiller0806',
 
@@ -40,8 +40,9 @@ const About = () => {
             title: 'Web Developer',
             avatar: valProf,
             bio: 'Val loves food',
-            facts: " doesn't have pets",
-            portfolioLink: '',
+            facts: "Val loves videogames, collects mechanical keyboards and dreams to move to Orlando Harry Potter World. Full Stack MERN & Java geek with a passion for server-side/back-end web development.",
+            favProduct: "BOBBI BROWN - Vitamin Enriched Face Base",
+            portfolioLink: 'https://www.linkedin.com/in/valeriya-kim/',
             gitHub: 'https://github.com/valkim55',
 
         },
