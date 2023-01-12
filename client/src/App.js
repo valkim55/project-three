@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import MyFaves from './components/MyFaves';
 import SearchProduct from "./components/SearchProduct";
 import About from './components/About'
-import Footer from './components/Footer'
+
 import Homepage from './components/Homepage'
 
 
@@ -62,7 +62,7 @@ function App() {
       </Router>
       
       
-    <Footer className='footer' />
+    <div className='footer'><Footer  /></div>
     </ApolloProvider>
 
   );

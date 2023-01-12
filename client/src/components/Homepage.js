@@ -11,8 +11,8 @@ const Homepage = () => {
       <Carousel.Item >
         <div className="carouselImg"><img  width="1500"  src={img1} alt="First slide"/></div>
         <Carousel.Caption>
-          <h2>First slide label</h2>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h2 className='captionTitle'>Welcome to &lt;Deployed/&gt; Skincare</h2>
+          <h5 className='captionText'>The app where you can look up skincare products according to your needs and concerns and find the most affordable vendors.</h5>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -20,8 +20,8 @@ const Homepage = () => {
       <div className="carouselImg"><img src={img2} width="1500" alt="Second slide" /></div>
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h2 className='captionTitle'>This application was created by three female web developers/skincare enthusiasts</h2>
+          <h5 className='captionText'>Each of us has tested a lot of products and we understand how important it is to find a product that will fit your individual needs.</h5>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -29,10 +29,8 @@ const Homepage = () => {
       <div className="carouselImg"><img width="1500" src={img3} alt="Third slide" /></div>
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h2 className='captionTitle'>We wanted to make skincare researching more accessible and less stressful</h2>
+          <h5 className='captionText'>We aspire to provide our users with the effective affordable options accessible in your area.</h5>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
