@@ -37,7 +37,7 @@ const About = () => {
 
   return (
     <div>
-        {creators.map((creator) => (
+        {creators.map(( {name, avatar} ) => (
             <Card></Card>
         ))}
     </div>

@@ -27,11 +27,11 @@ const Navigation = () => {
 
               <Nav.Link as={Link} to="/myFaves">
                 My Faves
-            </Nav.Link>
+              </Nav.Link>
 
-            <Nav.Link as={Link} to="/about">
+              <Nav.Link as={Link} to="/about">
                 About Us
-            </Nav.Link>
+              </Nav.Link>
 
               {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
