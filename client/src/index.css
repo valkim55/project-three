@@ -11,3 +11,65 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+    background-color: #DEC1F5;
+}
+
+.searchButtons {
+    background-color: #8769AC;
+    margin: 10px;
+    
+    
+}
+
+.pageTitle {
+    padding: 10px;
+}
+
+.singleButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.buttons {
+    background: #513f67;    
+    border: none;
+    padding: 20px;
+    color: white;
+    border-radius: 30px;
+    width: 150px;
+}
+
+.searchResults {
+    background-color: #6FD08C;
+}
+
+.singleCard {
+    background-color: #A9DC92;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.carouselBox {
+    margin: 50px;
+}
+
+.carouselImg {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    
+}
+
+.carousel-caption {
+    
+    bottom: 200px;
+}

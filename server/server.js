@@ -6,6 +6,8 @@ const { ApolloServer } = require("apollo-server-express");
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
 
+const jsonData = require('./seeds/seeds.json')
+
 //import middleware
 const { authMiddleware } = require("./utils/auth");
 
@@ -21,6 +23,16 @@ const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+app.get('/categories/:category', (req, res) => {
+    console.log(req.params.category)
+    //console.log(jsonData)
+    const filteredData = jsonData.filter((product) => {
+        //console.log(product)
+        return product.category === req.params.category
+    })
+    return res.json({filteredData})
+})
 
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {

@@ -1,10 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+
 import Navigation from "./components/Navigation";
 import MyFaves from './components/MyFaves';
 import SearchProduct from "./components/SearchProduct";
 import About from './components/About'
+import Footer from './components/Footer'
+import Homepage from './components/Homepage'
+
+
 
 import {
   ApolloProvider,
@@ -39,6 +44,7 @@ function App() {
         <Navigation/>
 
         <Routes>
+            <Route path='/' element={<Homepage />} ></Route>
             <Route path='/myfaves' element={<MyFaves />}>
 
             </Route>
@@ -53,7 +59,11 @@ function App() {
         </Routes>
         </>
       </Router>
+      
+      
+    <Footer className='footer' />
     </ApolloProvider>
+
   );
 }
 
