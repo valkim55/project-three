@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.weava-extension-context,
+.highlighter-context {
+  background-color: #dcd0ff;
+
+}
+
+
+.about-us {
+  text-align: center;
+}
+.card {
+  background-color: #bfacf5;
+  padding: 15px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.name-creator, .fun-fact, .about-creator, .faveProduct {
+  font-weight: bold;
+}
+
+.fun-fact, .creator-fact {
+  display: inline-block;
+}
+
+.prof-img {
+  width: 50%;
+}
