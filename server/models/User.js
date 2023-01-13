@@ -1,6 +1,8 @@
 const { Schema, model, Types } = require("mongoose");
 const bcrypt = require("bcrypt");
 
+const Product = require('./Product')
+const ProductSchema = require('./Product')
 
 const userSchema = new Schema(
   {
@@ -19,10 +21,9 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    favoriteProducts: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Product'}
+    favoriteProducts: [ {
+        type: Schema.Types.ObjectId,
+        ref: 'Product'}
     ]
   },
   // set this to use virtual below
@@ -49,9 +50,9 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // when we query a user, we'll also get another field called `bookCount` with the number of saved books we have
-userSchema.virtual("bookCount").get(function () {
-  return this.savedBooks.length;
-});
+// userSchema.virtual("bookCount").get(function () {
+//   return this.savedBooks.length;
+// });
 
 const User = model("User", userSchema);
 

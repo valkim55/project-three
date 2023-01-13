@@ -1,20 +1,22 @@
 const { User, Product } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
+const [productData] = require('../seeds/seeds.json')
+
+const {_id, title, description} = [productData];
 
 const resolvers = {
-  Query: {
-    me: async (parent, args, context) => {
-        if(context.user) {
-            const userData = await User.findOne({ _id: context.user._id })
-                .select(' -__v -password')
-                .populate('favProducts')
-                
-            console.log('authentication successful')
-            return userData;
-        }
 
-        throw new AuthenticationError('Not logged in')
+  Query: {
+
+    me: async (parent, args, context) => {
+        if (context.user) {
+          const user = await User.findOne({ _id: context.user._id }).select(
+            "-__v -password"
+          );
+          return user;
+        }
+        throw new AuthenticationError("User not logged in!");
     },
 
     products: async () => {
@@ -33,46 +35,48 @@ const resolvers = {
   },
 
   Mutation: {
+
     addUser: async (parent, args) => {
-            
-        const user = await User.create(args);
+        try {
+          console.log(args);
+          const user = await User.create(args);
+          const token = signToken(user);
+          return { token, user };
+        } catch (error) {
+          throw new AuthenticationError(error);
+        }
+      },
+
+    login: async (parent, args) => {
+        const user = await User.findOne({ email: args.email });
+        if (!user) {
+            throw new AuthenticationError("Incorrect email!");
+        }
+        const correctPw = await user.isCorrectPassword(args.password);
+
+        if (!correctPw) {
+            throw new AuthenticationError("Incorrect credentials");
+        }
         const token = signToken(user);
-        console.log('trying to add user')
+        console.log(user)
         return { token, user };
         
     },
 
-    login: async (parent, {email, password}) => {
-        const user = await User.findOne({ email });
-
-        if (!user) {
-        throw new AuthenticationError("Incorrect email!");
-        }
-        const correctPw = await user.isCorrectPassword(password);
-
-        if (!correctPw) {
-        throw new AuthenticationError("Incorrect credentials");
-        }
-        const token = signToken(user);
-        return { token, user };
-    },
-
-    addProduct: async (parent, args, context) => {
+    saveProduct: async (parent, {productData}, context) => {
+        console.log('test')
 
         // check if the user is authenticated to be allowed to save products
         if(context.user) {
 
             // find product by its title
-            const product = await Product.findOne(args.title, {username: context.user.username});
-
-            // update User by adding selected product to user's products array
-            await User.findByIdAndUpdate(
-                { _id: context.user._id },
-                { $push: {favProducts: product._id} },
-                { new: true }
+            const updatedUser = await User.findOneAndUpdate(
+                {_id: context.user._id},
+                { $push: {favoriteProducts: productData} },
+                { new: true}             
             );
-
-            return product;
+            console.log(updatedUser);
+            return updatedUser;
         }
 
         throw new AuthenticationError('You need to be logged in to save products!')
