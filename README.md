@@ -12,6 +12,7 @@
 - [Meet the creators](#meet-the-creators)
 - [Screenshots & Links](#screenshots-and-links)
 <br></br>
+
 ### ___Application Architecture___
 <p> To match the standards for the MERN stack application we designed Deployed Skincare in accordance with <strong>MVC (Model-View-Controller)</strong> architectural pattern. <br>
 Our <strong>Model</strong> tier is hosting MongoDB, where we store seed data for our application and our Models.<br>
@@ -27,11 +28,13 @@ Please refer to the following resources in this repository<br>
    ### ___Functionality and Motivation___
 > #### Functionality
 - The users are presented with a homepage with a short introduction about our application. <strong>Navigation bar</strong> offers to take a user to different pages (which are rendered React components), <strong>Login/Signup</strong> page offers an option to create a user account to access more advanced feature of the application in the future. Thanks to GraphQL and JWT authentication features, we provided a safe way for saving user's credentials.<br>
+
 - <strong>Search Product</strong> page lets users click on a category name and retrieve the products that belong to a selected category.<br>
 
 - Right now the functionality stretches as far as to let users 'favorite' the products and in the future we'll be working on enabling the users to see all the 'favorite' products on a separate page (rendered on a separate React Component).<br></br>
 > #### Motivation
 Ultimately, our goal is create a space where every user can find a product that will serve specifically their needs, and if the users are not sure what that product is, our application will provide online consultations to cater to users' needs.<br> As those who have tested dozens of products, we're also aiming to let our users to select the most affordable prices with certified vendors. And most importantly, make users feel like there's someone out there with the same concerns ready to support them! <br></br>
+
    ### ___Meet the creators___
 <dl>
     <dt><strong>⭐ Caitlin O'Reilly <strong></dt>
@@ -63,7 +66,9 @@ Ultimately, our goal is create a space where every user can find a product that 
 <strong> select product: </strong></br>
 <img src='./client/src/img/searchPage.png' width="900"><br>
 <br></br>
+
 > #### Links
 <strong> You can find deployed versions of our application on Heroku <em>[here:](heroku link) </em> and on GitHub Pages <em>[right here:](github pages link)</em> </strong>
 <br></br>
+
 ### Thank you for visiting!💖

@@ -1,8 +1,6 @@
 const { Schema, model, Types } = require("mongoose");
 const bcrypt = require("bcrypt");
-
-const Product = require('./Product')
-const ProductSchema = require('./Product')
+const productSchema = require('./Product')
 
 const userSchema = new Schema(
   {
@@ -21,10 +19,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    favoriteProducts: [ {
-        type: Schema.Types.ObjectId,
-        ref: 'Product'}
-    ]
+    favoriteProducts: [ productSchema ]
   },
   // set this to use virtual below
   {
