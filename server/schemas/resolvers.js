@@ -64,7 +64,8 @@ const resolvers = {
     },
 
     saveProduct: async (parent, {productData}, context) => {
-        console.log('test')
+        console.log('productData', productData)
+        console.log(context.user)
 
         // check if the user is authenticated to be allowed to save products
         if(context.user) {

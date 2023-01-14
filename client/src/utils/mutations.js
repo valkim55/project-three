@@ -25,3 +25,15 @@ export const LOGIN = gql`
     }
   }
 `;
+
+export const SAVE_PRODUCT = gql`
+  mutation saveProduct($productData: ID!) {
+    saveProduct(productData: $productData) {
+      _id
+      username
+      favoriteProducts {
+        _id
+      }
+    }
+  }
+`;
