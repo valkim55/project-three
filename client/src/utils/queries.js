@@ -16,3 +16,18 @@ export const PRODUCT_BY_CATEGORY = gql`
     }
   }
 `;
+
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      username
+      email
+      favoriteProducts {
+        _id
+        title
+        description
+      }
+    }
+  }
+`;

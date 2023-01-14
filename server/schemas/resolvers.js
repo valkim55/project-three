@@ -1,9 +1,7 @@
-const { User, Product } = require("../models");
+const { User } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
-const [productData] = require('../seeds/seeds.json')
 
-const {_id, title, description} = [productData];
 
 const resolvers = {
 

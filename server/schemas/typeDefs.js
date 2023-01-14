@@ -1,28 +1,23 @@
 // import the gql tagged template function
 const { gql } = require("apollo-server-express");
-const {productData} = require('../seeds/seeds.json')
-const {_id, title, description} = {productData};
+
+
 
 // create our typeDefs
 const typeDefs = gql`
-  
-  
 
   type Product {
     _id: ID!
     title: String
-    description: String
-    main_image: String
     price: String
-    rating: Float
-    ratings_total: Int
-    brand: String
-    link: String
-    category: String
+  }
+
+  input ProductInput {
+    title: String
+    price: String
   }
 
   type User {
-
     _id: ID!
     username: String
     email: String
@@ -44,7 +39,7 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
-    saveProduct(productData: ID!): User
+    saveProduct(productData: ProductInput): User
     removeProduct(productId: ID!): User
   }
 `;

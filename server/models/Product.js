@@ -1,20 +1,14 @@
-const {Schema, model} = require('mongoose');
+const {Schema} = require('mongoose');
 
-const ProductSchema = new Schema(
+const productSchema = new Schema(
     {
-       _id: {
-            type: Schema.Types.ObjectId
-       },
-
         title: {
             type: String, 
-            
             unique: true
         },
 
         category: {
-            type: String, 
-            required: true
+            type: String
         },
 
         description: {
@@ -48,11 +42,7 @@ const ProductSchema = new Schema(
         link: {
             type: String
         }
-
-
-
     }
 );
 
-const Product = model('Product', ProductSchema);
-module.exports = Product;
+module.exports = productSchema;

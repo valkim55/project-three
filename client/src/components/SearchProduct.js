@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import AuthService from '../utils/auth'
 
 import { Container, Row, Col, Button, Card, ListGroup } from "react-bootstrap";
 
@@ -22,6 +22,8 @@ const SearchProduct = () => {
         })
         
     }
+
+    
 
   return (
     <div>

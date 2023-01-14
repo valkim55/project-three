@@ -25,3 +25,22 @@ export const LOGIN = gql`
     }
   }
 `;
+
+export const ADD_PRODUCT = gql`
+  mutation addProduct($productId: ID!) {
+    addProduct(productId: $productId) {
+      _id
+      username
+      favoriteProducts {
+        _id
+        title
+        main_image
+        price
+        rating
+        ratings_total
+        brand
+        link
+      }
+    }
+  }
+`;
