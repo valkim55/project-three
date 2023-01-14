@@ -37,27 +37,26 @@ Ultimately, our goal is create a space where every user can find a product that 
 
    ### ___Meet the creators___
 <dl>
-    <dt><strong>💻 Caitlin O'Reilly <strong></dt>
+    <dt><strong>⭐ Caitlin O'Reilly <strong></dt>
     <dd>Caitlin is a third grade teacher and a full stack developer with a passion for creating educational technology resources for her students and other children. She loves traveling, watercolor painting, and trying new craft breweries. </dd>
 </dl>
 
 <dl>
-    <dt><strong>💻 Valeriya Kim </strong></dt>
+    <dt><strong>⭐ Valeriya Kim </strong></dt>
     <dd>Val loves videogames, collects mechanical keyboards and dreams to move to Orlando Harry Potter World. Full Stack MERN & Java geek with a passion for server-side/back-end web development.</dd>
 </dl>
 
 <dl>
-    <dt><strong>💻 Ariel Miller  </strong></dt>
+    <dt><strong>⭐ Ariel Miller  </strong></dt>
     <dd>A full stack web developer with a strong proficiency in HTML, CSS, JS, MERN stack, Sequelize, MySQL, NoSQL, Mongoose, Bootstrap, and MaterializeCSS.</dd>
 </dl>
 
 
-| 🔧 Developer  | 🔗 GitHub                                      | 🔗 LinkedIn/Portfolio                    |
+| 👩‍💻 Developer  | 💻 GitHub                                      | 💬 LinkedIn/Portfolio                    |
 |:--------------:|:----------------------------------------------:|:-----------------------------------------:|
 | Caitlin       | [caitoreilly](https://github.com/caitoreilly)   | [Caitlin O'Reilly](https://caitoreilly.github.io/react-portfolio/)
 | Valeriya      | [valkim55](https://github.com/valkim55)         | [Valeriya Kim](https://www.linkedin.com/in/valeriya-kim-763572204/)
 | Ariel         | [amiller0806](https://github.com/amiller0806)   | [Ariel Miller](https://amiller0806.github.io/HTML-Advanced-CSS-Portfolio/)
-<br></br>
 
 ### ___Screenshots and Links___
 > #### Screenshots
@@ -72,4 +71,4 @@ Ultimately, our goal is create a space where every user can find a product that 
 <strong> You can find deployed versions of our application on Heroku <em>[here:](heroku link) </em> and on GitHub Pages <em>[right here:](github pages link)</em> </strong>
 <br></br>
 
-### Thank you for visiting!
+### Thank you for visiting!💖
