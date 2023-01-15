@@ -1,5 +1,5 @@
 const db = require("../config/connection");
-const { Product } = require("../models");
+const { Product } = require("../models/Product");
 const productData = require("./products.json");
 
 const importData = async () => {
