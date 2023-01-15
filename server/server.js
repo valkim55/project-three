@@ -9,7 +9,7 @@ const { typeDefs, resolvers } = require("./schemas");
 const { authMiddleware } = require("./utils/auth");
 const db = require("./config/connection");
 
-const jsonData = require("./seeders/seeds.json");
+const jsonData = require("./seeders/products.json");
 
 
 
