@@ -68,7 +68,9 @@ Ultimately, our goal is create a space where every user can find a product that 
 <br></br>
 
 > #### Links
-<strong> You can find deployed versions of our application on Heroku <em>[here:](heroku link) </em> and on GitHub Pages <em>[right here:](github pages link)</em> </strong>
+<strong> You can find deployed versions of our application on Heroku <em>[here:](https://whispering-wildwood-03481.herokuapp.com/) </em> <br>
+GitHub repository for deployed application can be found <em>[here:](https://github.com/valkim55/deployed-skincare)</em> <br>
+GitHub repository with commits history and development/feature branches can be found <em>[here:](https://github.com/valkim55/project-three)</em></strong>
 <br></br>
 
 ### Thank you for visiting!💖
