@@ -1,1 +1,1 @@
-web:node src/project-three.js
+web: node server.js
