@@ -1,6 +1,9 @@
+const mongoose = require('mongoose');
 const db = require("../config/connection");
-const { Product } = require("../models/Product");
+const {Product} = require("../models/Product");
 const productData = require("./products.json");
+
+
 
 const importData = async () => {
   try {
@@ -9,8 +12,8 @@ const importData = async () => {
             console.log('db dropped')
         }
     )
-    await Product.create(productData);
-    console.log("success");
+    const products = await Product.create(productData);
+    console.log("success", products);
     process.exit();
   } catch (err) {
     console.log(err);
